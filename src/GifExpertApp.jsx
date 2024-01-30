@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { AddCategory } from "./components/AddCategory";
+
 // import React from "react";
 // Despues de la version 17 de react ya no es necesario estar importando react a cada uno.
 
@@ -16,6 +18,7 @@ export const GifExpertApp = () => {
         {/* titulo */}
         <h1>GifExpertApp</h1>
         {/* input */}
+        <AddCategory />
         {/* listado de gif */}
         <button onClick={onAddCategory}>Agregar</button>
         <ol>
