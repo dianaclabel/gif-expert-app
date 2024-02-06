@@ -6,11 +6,10 @@ import { GifGrid } from "./components/GifGrid";
 // Despues de la version 17 de react ya no es necesario estar importando react a cada uno.
 
 export const GifExpertApp = () => {
-  const [categories, setCategories] = useState(["One Punch", "Dragon Ball"]);
+  const [categories, setCategories] = useState(["One Punch"]);
 
   const onAddCategory = (newCategory) => {
     if (categories.includes(newCategory)) return;
-
     setCategories([newCategory, ...categories]);
   };
 
