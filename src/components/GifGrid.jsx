@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { getGifs } from "../helpers/getGifs.js";
 
 export const GifGrid = ({ category }) => {
   const [counter, setCounter] = useState(10);
 
-  getGifs(category);
+  useEffect(() => {
+    getGifs(category);
+  }, []);
 
   return (
     <>
