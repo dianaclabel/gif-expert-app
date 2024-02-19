@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas de componentes Debe de hacer match con el snapshot 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="One punch"
+      src="https://media4.giphy.com/media/Qm3xCXWifrgzb9aEqg/giphy.gif?cid=42367ee0x2m6sj8mfrvlwpus1n00rc6n1srgf79b6b01r7hv&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+    />
+    <p>
+      One punch
+    </p>
+  </div>
+</div>
+`;
