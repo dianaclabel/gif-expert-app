@@ -19,7 +19,8 @@ export const AddCategory = ({ onNewCategory }) => {
   };
 
   return (
-    <form onSubmit={(event) => onSubmit(event)}>
+    // aria-label nos permite que testing -library este enterado de que este label existe
+    <form onSubmit={(event) => onSubmit(event)} aria-label="form">
       <input
         type="text"
         placeholder="Buscar gifs"
