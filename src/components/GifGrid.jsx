@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { GifItem } from "./Gifitem.jsx";
 import { useFetchGifs } from "../hooks/useFetchGifs.js";
 
@@ -21,4 +22,8 @@ export const GifGrid = ({ category }) => {
       {/* <button onClick={() => setCounter(counter + 1)}> +1</button> */}
     </>
   );
+};
+
+GifGrid.protTypes = {
+  category: PropTypes.string.isRequired,
 };
