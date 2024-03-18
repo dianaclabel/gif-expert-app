@@ -7,6 +7,7 @@ jest.mock("../../src/hooks/useFetchGifs");
 
 describe("Pruebas en <GifGrid />", () => {
   const category = "One punch";
+
   test("Debe de mostrar el loading inicialmente", () => {
     useFetchGifs.mockReturnValue({
       images: [],
@@ -16,7 +17,6 @@ describe("Pruebas en <GifGrid />", () => {
     render(<GifGrid category={category} />);
     expect(screen.getByText("cargando..."));
     expect(screen.getByText(category));
-    screen.debug();
   });
 
   test("Debe de mostrar items cuando se cargan las imágenes useFetchGifs", () => {
@@ -26,13 +26,20 @@ describe("Pruebas en <GifGrid />", () => {
         title: "Saitama",
         url: "https://localhost/saitama.jpg",
       },
+      {
+        id: "123",
+        title: "Goku",
+        url: "https://localhost/goku.jpg",
+      },
     ];
 
     useFetchGifs.mockReturnValue({
-      images: [],
+      images: gifs,
       isLoading: false,
     });
 
     render(<GifGrid category={category} />);
+    screen.debug();
+    expect(screen.getAllByRole("img").length).toBe(2);
   });
 });
