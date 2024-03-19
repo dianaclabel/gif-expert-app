@@ -5,7 +5,11 @@ import { AddCategory, GifGrid } from "./components";
 // Despues de la version 17 de react ya no es necesario estar importando react a cada uno.
 
 export const GifExpertApp = () => {
-  const [categories, setCategories] = useState(["One Punch"]);
+  const [categories, setCategories] = useState([
+    "Titanic",
+    "Dune",
+    "Gato con botas",
+  ]);
 
   const onAddCategory = (newCategory) => {
     if (categories.includes(newCategory)) return;
@@ -17,7 +21,7 @@ export const GifExpertApp = () => {
   return (
     <div>
       <>
-        <h1>GifExpertApp</h1>
+        <h1 className="title-principal">GifMovieApp🎬</h1>
 
         <AddCategory onNewCategory={(event) => onAddCategory(event)} />
 
